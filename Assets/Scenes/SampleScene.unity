@@ -2888,6 +2888,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 34922332874241609, guid: e9f647a952470194bb86e3a3307758c1,
         type: 3}
+      propertyPath: weaponTip
+      value: 
+      objectReference: {fileID: 2351050653892734045}
+    - target: {fileID: 34922332874241609, guid: e9f647a952470194bb86e3a3307758c1,
+        type: 3}
       propertyPath: shootingForce
       value: 500
       objectReference: {fileID: 0}
@@ -2966,6 +2971,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9f647a952470194bb86e3a3307758c1, type: 3}
+--- !u!4 &2351050653892734045 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6518322066425062336, guid: e9f647a952470194bb86e3a3307758c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2351050653892734044}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
