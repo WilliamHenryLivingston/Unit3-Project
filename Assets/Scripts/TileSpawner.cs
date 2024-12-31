@@ -2,8 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HexGridGenerator : MonoBehaviour
-{
-    public float tileSize = 101.845f;
+{ //101.845
+    public float tileSize = 1.01845f;
+    public Vector3 spawnCenter = Vector3.zero;
 
     [System.Serializable]
     public class HexTile
@@ -14,8 +15,8 @@ public class HexGridGenerator : MonoBehaviour
 
     public List<HexTile> hexTiles;
 
-    [Range(20, 100)]
-    public int gridSize = 100;
+    [Range(2, 10)]
+    public int gridSize = 10;
 
     private void Start()
     {
@@ -57,7 +58,7 @@ public class HexGridGenerator : MonoBehaviour
                 GameObject tilePrefab = PickWeightedRandom(hexTiles);
                 GameObject tile = Instantiate(tilePrefab, transform);
 
-                tile.transform.position = new Vector3(offsetX, 0, offsetY);
+                tile.transform.position = spawnCenter + new Vector3(offsetX, 0, offsetY);
                 float rotationAngle = Mathf.Floor(Random.Range(0f, 6f)) * 60f;
                 tile.transform.rotation = Quaternion.Euler(0, rotationAngle, 0);
 

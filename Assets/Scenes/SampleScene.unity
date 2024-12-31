@@ -1777,41 +1777,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c82d2a2c968f85a4c99d34a36e27e073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileSize: 101.845
+  tileSize: 5.09225
+  spawnCenter: {x: 0, y: -5, z: 30}
   hexTiles:
   - item: {fileID: 7696489571412551442, guid: 2236896261bed324e82bed5040caf1ae, type: 3}
     probability: 5
   - item: {fileID: 878275972577148611, guid: dec1c048ca489f24ea7aadd7ddda2fd8, type: 3}
-    probability: 1
+    probability: 0.5
   - item: {fileID: 3128474249445769458, guid: b39f3cf869d3ca643ad3d56e9a961edc, type: 3}
-    probability: 1
+    probability: 0.3
   - item: {fileID: 2716441128981608975, guid: dff5e37213edebb498ccdafc35bce75c, type: 3}
-    probability: 1
+    probability: 0.5
   - item: {fileID: 690024186112530070, guid: 72cd921fdff188043bf2a61586a45b66, type: 3}
-    probability: 1
+    probability: 0.5
   - item: {fileID: 3737777713975812370, guid: 257b2da0ce6d4e4489a77eff90566cbd, type: 3}
     probability: 5
   - item: {fileID: 6372167391165747886, guid: 080d92b8472035247b2385d171d211f8, type: 3}
     probability: 5
   - item: {fileID: 2145959803728645548, guid: 1ee868cf1a2d07645acaea3d7f9e82ef, type: 3}
-    probability: 1
+    probability: 0.5
   - item: {fileID: 7702844509285904131, guid: 7cde98164a8758b4ab9a7e025f8d6718, type: 3}
     probability: 7
   - item: {fileID: 254821944799973299, guid: d062752d6380ea849804c855bd112c7f, type: 3}
-    probability: 1
+    probability: 0.3
   - item: {fileID: 6455985685916414352, guid: c4ab21ecbb4e8bb4c9e7d2c32dbf8e23, type: 3}
-    probability: 1
+    probability: 0.5
   - item: {fileID: 3891760854425896340, guid: 2b24d2d06cde5e642be8cc63cf80efcd, type: 3}
-    probability: 1
+    probability: 0
   - item: {fileID: 5364982865758203284, guid: 7f7b8430da8700541b5a50fea102d51b, type: 3}
-    probability: 1
+    probability: 0.1
   - item: {fileID: 7266518380597596765, guid: f4c0fc3869a371948b5515347afb9143, type: 3}
     probability: 5
   - item: {fileID: 7645129345228396531, guid: a52b2b7687aa27342a3ed2d4296faf83, type: 3}
-    probability: 1
+    probability: 0.5
   - item: {fileID: 7017791491566268010, guid: 2b6103a0dea3cbd4f950146e41d46065, type: 3}
-    probability: 1
-  gridSize: 100
+    probability: 0.3
+  gridSize: 10
 --- !u!4 &1495158063
 Transform:
   m_ObjectHideFlags: 0
@@ -1821,7 +1822,7 @@ Transform:
   m_GameObject: {fileID: 1495158061}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 108.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
