@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HexGridGenerator : MonoBehaviour
-{ //101.845
-    public float tileSize = 1.01845f;
+{ 
+    public float tileSize = 1.01845f; //original number = 101.845
     public Vector3 spawnCenter = Vector3.zero;
 
     [System.Serializable]
