@@ -6,6 +6,7 @@ public class InteractAbility : MonoBehaviour
 {
     [SerializeField] private Transform interactionTip;
     [SerializeField] private LayerMask interactionFilter;
+    [SerializeField] private GrabbingAbility grabbingAbility;
 
     // Update is called once per frame
     public void Interact()
@@ -23,6 +24,10 @@ public class InteractAbility : MonoBehaviour
 
             interactFeature.StartInteraction();
 
+        }
+        else
+        {
+            grabbingAbility.PickUpObject(tempHit.rigidbody);
         }
 
     }

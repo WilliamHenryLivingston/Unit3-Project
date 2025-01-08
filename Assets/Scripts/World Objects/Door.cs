@@ -23,4 +23,9 @@ public class Door : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
+    public void CloseDoor()
+    {
+        gameObject.SetActive(true);
+    }
 }
