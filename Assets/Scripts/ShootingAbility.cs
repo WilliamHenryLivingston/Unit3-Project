@@ -8,6 +8,13 @@ public class ShootingAbility : MonoBehaviour
     [SerializeField] private Rigidbody projectilePrefab;
     [SerializeField] private float shootingForce;
 
+    ObjectPooling objectPoolingCache; //Could add Serialize Field here
+
+    private void Awake()
+    {
+        objectPoolingCache = FindObjectOfType<ObjectPooling>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +29,13 @@ public class ShootingAbility : MonoBehaviour
 
     public void Shoot()
     {
-        Rigidbody clonedRigidbody = Instantiate(projectilePrefab, weaponTip.position, weaponTip.rotation);
+        if (objectPoolingCache == null) return;
+
+        Rigidbody clonedRigidbody = FindObjectOfType<ObjectPooling>().RetrieveAvailableBullet().GetRigidbody();
+
+        clonedRigidbody.position = weaponTip.position;
+        clonedRigidbody.rotation = weaponTip.rotation;
+
         clonedRigidbody.AddForce(weaponTip.forward * shootingForce);
     }
 }

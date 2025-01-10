@@ -8,13 +8,17 @@ public class InteractAbility : MonoBehaviour
     [SerializeField] private LayerMask interactionFilter;
     [SerializeField] private GrabbingAbility grabbingAbility;
 
-    // Update is called once per frame
     public void Interact()
     {
         Ray customRay = new Ray(interactionTip.position, interactionTip.forward);
         RaycastHit tempHit;
 
-        if (!Physics.Raycast(customRay, out tempHit, 5f, interactionFilter)) return;
+        if (!Physics.Raycast(customRay, out tempHit, 5f, interactionFilter))
+        {
+            grabbingAbility.DropObject();
+            return;
+        }
+            
 
         IInteractable interactFeature = tempHit.collider.GetComponent<IInteractable>();
 
